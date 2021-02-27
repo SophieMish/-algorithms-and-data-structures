@@ -135,9 +135,11 @@ public:
     //mul
     BinaryNumber shift_left() {
         BinaryNumber res = *this;
+        auto tmp = binary_num_[0];
         for (int idx = 0; idx < size() - 1; idx++) {
             res.binary_num_[idx] = res.binary_num_[idx + 1];
         }
+        res.binary_num_[size()-1] = tmp;
         return res;
     }
 

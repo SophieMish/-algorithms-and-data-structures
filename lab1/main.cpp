@@ -116,7 +116,7 @@ public:
                 carryOut = carry;
             }
         }
-//        bool overflow = (!binary_num_[0] && !other.binary_num_[0] && res[0]) || (binary_num_[0] && other.binary_num_[0] && !res[0]);
+//       bool overflow = (!binary_num_[0] && !other.binary_num_[0] && res[0]) || (binary_num_[0] && other.binary_num_[0] && !res[0]);
         if ((carryOut && !carry) || (!carryOut && carry)) {
             throw runtime_error("Overflow error");
         }
@@ -127,9 +127,11 @@ public:
     //mul
     BinaryNumber shift_left() {
         BinaryNumber res = *this;
+        auto tmp = binary_num_[0];
         for (int idx = 0; idx < size() - 1; idx++) {
             res.binary_num_[idx] = res.binary_num_[idx + 1];
         }
+        res.binary_num_[size()-1] = tmp;
         return res;
     }
 
