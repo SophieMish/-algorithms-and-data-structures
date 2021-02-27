@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/sophia/CLionProjects/lab2/BinaryNumber.hpp
+iostream
+-
+array
+-
+limits
+-
+vector
+-
+sstream
+-
+
+/Users/sophia/CLionProjects/lab2/Stack.hpp
+vector
+-
+
+/Users/sophia/CLionProjects/lab2/main.cpp
+iostream
+-
+BinaryNumber.hpp
+/Users/sophia/CLionProjects/lab2/BinaryNumber.hpp
+Stack.hpp
+/Users/sophia/CLionProjects/lab2/Stack.hpp
+
